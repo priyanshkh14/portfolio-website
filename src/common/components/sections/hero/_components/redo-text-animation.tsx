@@ -11,9 +11,9 @@ export default function RedoTextAnimation({ delay }: IRedoTextAnimationProps) {
   const textIndex = useMotionValue(0);
 
   const texts = [
-    "Thanks for visiting!",
+    "Thanks for visiting! Slide down to explore more👇.",
     "I am Computer Engineering student from India.",
-    "My primary interest lies in Product development",
+    "My primary interest lies in Product development.",
     "Continuous learning keeps me sharp and ready for the future.",
     "Debugging is like a treasure hunt, but with bugs!",
     "Algorithms are the poetry of programming.",
