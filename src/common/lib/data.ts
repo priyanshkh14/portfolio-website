@@ -5,7 +5,7 @@ import React from 'react';
 // import filedriveImg from '@/../public/images/file-drive.png';
 // import projectmanagementImg from '@/../public/images/project-management.png';
 // import reactfoodImg from '@/../public/images/react-food.png';
-import surgeImg from '@/../public/images/surge.png';
+// import surgeImg from '@/../public/images/surge.png';
 import portfolioImg from '@/../public/images/portfolio.png';
 import barksAndWhiskers from '@/../public/images/barks-and-whiskers.jpg';
 import speech2Sign from '@/../public/images/speech-2-sign.png';
@@ -23,17 +23,17 @@ export const links = [
     id: 'about',
   },
   {
-    name: 'Academics',
-    id: 'academics',
+    name: 'Experience',
+    id: 'experience',
   },
   {
     name: 'Projects',
     id: 'projects',
   },
-  // {
-  //   name: 'Experience',
-  //   id: 'experience',
-  // },
+  {
+    name: 'Academics',
+    id: 'academics',
+  },
   {
     name: 'Skills',
     id: 'skills',
@@ -50,26 +50,39 @@ export const academicsData = [
     location: 'Noida, Uttar Pradesh, India',
     description: `B.Tech in Computer Science and Engineering (CSE). 
     [Relevant Coursework]: Database Systems, Data Structures, Algorithms & Problem Solving, Operating Systems, Machine Learning, Deep Learning, NLP, Probability and Statistics, Computer Organisation and Architecture, Software Engineering, Computer Networks & IoT, Big Data Ingestion, Front End Programming, Cryptography & Network Security, Digital Forensics & Cyber Security.`,
-    icon: React.createElement(BriefcaseBusinessIcon),
+    icon: React.createElement(BookIcon),
     date: 'Aug 2021 - Present',
   },
   {
     title: 'Ramjas School',
     location: 'Anand Parbat, Delhi, India',
     description: 'High School Diploma in Science with Mathematics and Computer Science.',
-    icon: React.createElement(BriefcaseBusinessIcon),
+    icon: React.createElement(BookIcon),
     date: 'July 2018 - July 2021',
   },
 ] as const;
 
 export const experiencesData = [
   {
-    title: '',
-    location: '',
-    description:
-      '',
+    title: 'Ruaa Ventures',
+    location: 'Bengaluru, India (Remote)',
+    description: 'Full-stack Developer with a focus on building accessible, interactive user interfaces. Responsible for implementation, debugging, and testing. Actively contributing to diverse projects involving AI integration.',
     icon: React.createElement(BriefcaseBusinessIcon),
-    date: '',
+    date: 'July 2025 - Present',
+  },
+  {
+    title: 'Jaypee Institute of Information Technology',
+    location: 'Noida, India (Hybrid)',
+    description: 'Research Intern. Developed CNN-based pipelines with CUDA for mammogram analysis, achieving 95%+ accuracy and 12% improvement over baselines; deployed on GPUs/HPCs, cutting training time by 40% and scaling to 100+ GB data.',
+    icon: React.createElement(BriefcaseBusinessIcon),
+    date: 'June 2024 - July 2024',
+  },
+  {
+    title: 'Coding Blocks',
+    location: 'New Delhi, India (Hybrid)',
+    description: 'Delivered DSA lectures to 200+ students in online/offline modes, created 100+ worksheets and coding challenges, and led 10+ interactive sessions weekly to boost engagement and hands-on learning.',
+    icon: React.createElement(BriefcaseBusinessIcon),
+    date: 'September 2023 - March 2024',
   },
 ] as const;
 

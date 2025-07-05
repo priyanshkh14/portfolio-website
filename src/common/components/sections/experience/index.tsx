@@ -13,7 +13,7 @@ import { experiencesData } from '@/common/lib/data';
 import SectionDivider from '@/common/components/shared/section-divider';
 
 export default function Experience() {
-  const { ref } = useSectionInView('academics'); // Change academics to experience when adding experience section
+  const { ref } = useSectionInView('experience');
   const { theme } = useTheme();
   const ihasMounted = useHasMounted();
 
