@@ -53,11 +53,28 @@ export default function Experience() {
                   display: theme === 'dark' ? 'none' : 'flex',
                 }}
               >
-                <h3 className="font-semibold">{item.title}</h3>
-                <p className="!mt-0 font-normal">{item.location}</p>
-                <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
+                <h3 className="font-semibold">
+                  {item.title}
+                </h3>
+                <p className="!mt-0 font-normal text-gray-600 dark:text-white/80">
+                  {item.role}
+                </p>
+                <p className="!mt-1 !font-normal !text-sm text-gray-500">
+                  {item.location}
+                </p>
+                <p className="!mt-2 !font-normal text-gray-700 dark:text-white/75">
                   {item.description}
                 </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {item.skills.split(', ').map((skill, skillIndex) => (
+                    <span
+                      key={skillIndex}
+                      className="rounded-full bg-black/10 px-3 py-1 text-xs uppercase tracking-wider text-black/80 dark:bg-white/10 dark:text-white/80"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </VerticalTimelineElement>
             </React.Fragment>
           ))}

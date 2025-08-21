@@ -13,7 +13,7 @@ export default function Header() {
   return (
     <header className="relative z-[99]">
       <motion.div
-        className="fixed left-1/2 top-0 h-[5.5rem] w-full rounded-none border border-[#f4f3ee] border-opacity-40 bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] md:w-[49.5rem] md:rounded-full"
+        className="fixed left-1/2 top-0 h-[6.2rem] w-full rounded-none border border-[#f4f3ee] border-opacity-40 bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] md:w-[49.5rem] md:rounded-full"
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
