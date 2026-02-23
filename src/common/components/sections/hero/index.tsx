@@ -40,7 +40,7 @@ export default function Hero() {
         </video>
         <div className="container flex flex-col items-start justify-center tracking-wide text-black dark:text-white">
           <div className="container relative flex h-full w-full flex-col items-center">
-            <div className="h-72 w-[280px] text-center text-[2rem] font-extrabold sm:w-[520px] md:w-[700px] lg:mb-5 lg:w-[920px] lg:text-[3rem]">
+            <div className="h-72 w-[90vw] text-center text-[2rem] font-extrabold sm:w-[520px] md:w-[700px] lg:mb-5 lg:w-[920px] lg:text-[3rem]">
               <motion.span
                 initial={{ y: -100, x: "-50%", opacity: 0 }}
                 animate={{ y: 0, x: "-50%", opacity: 1 }}
@@ -52,7 +52,7 @@ export default function Hero() {
               <TextAnimation delay={1} baseText={`I am Priyansh`} />
             </div>
             <motion.div
-              className="w-92 flex flex-col items-center justify-center gap-3 px-4 text-sm font-medium md:mt-12 md:flex-row lg:text-lg"
+              className="flex w-full flex-col items-center justify-center gap-3 px-4 text-sm font-medium md:mt-12 md:flex-row lg:text-lg"
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
@@ -60,7 +60,7 @@ export default function Hero() {
               }}
             >
               <a
-                className="group flex w-64 cursor-pointer items-center justify-center gap-2 rounded-full bg-darkBg px-7 py-3 text-white outline-none transition hover:bg-lightBeige hover:text-black hover:dark:text-black sm:w-auto"
+                className="group flex w-64 cursor-pointer items-center justify-center gap-2 rounded-full bg-darkBg px-7 py-3 text-white outline-none transition hover:bg-gray-400 hover:text-black hover:dark:text-black sm:w-auto"
                 onClick={(e) => {
                   smoothScrollTo({ e, id: "contact" });
                   setActiveSection("contact");
@@ -99,18 +99,18 @@ export default function Hero() {
                   />
                 </a>
                 <a
-          className="borderBlack flex h-[50px] w-[50px] cursor-pointer items-center justify-center gap-2 rounded-full bg-white p-2 text-gray-700 transition hover:bg-gray-100 hover:text-gray-950 dark:bg-white/10 dark:text-white/60 dark:hover:bg-white/20"
-          href="https://leetcode.com/u/priyanshkh14/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            width={25}
-            height={25}
-            src={"/svgs/leetcode.svg"}
-            alt="leetcode icon"
-          />
-        </a>
+                  className="borderBlack flex h-[50px] w-[50px] cursor-pointer items-center justify-center gap-2 rounded-full bg-white p-2 text-gray-700 transition hover:bg-gray-100 hover:text-gray-950 dark:bg-white/10 dark:text-white/60 dark:hover:bg-white/20"
+                  href="https://leetcode.com/u/priyanshkh14/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    width={25}
+                    height={25}
+                    src={"/svgs/leetcode.svg"}
+                    alt="leetcode icon"
+                  />
+                </a>
               </div>
             </motion.div>
           </div>

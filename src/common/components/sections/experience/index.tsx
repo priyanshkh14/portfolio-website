@@ -62,9 +62,9 @@ export default function Experience() {
                 <p className="!mt-1 !font-normal !text-sm text-gray-500">
                   {item.location}
                 </p>
-                <p className="!mt-2 !font-normal text-gray-700 dark:text-white/75">
+                <div className="!mt-2 !font-normal text-gray-700 dark:text-white/75">
                   {item.description}
-                </p>
+                </div>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {item.skills.split(', ').map((skill, skillIndex) => (
                     <span

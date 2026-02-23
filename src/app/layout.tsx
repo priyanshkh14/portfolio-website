@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: 'Priyansh Khajuria | Portfolio',
   description:
     'portfolio-website of Priyansh',
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 const fontMontserrat = FontMontserrat({
@@ -36,14 +39,14 @@ export default function RootLayout({
           <ActiveSectionContextProvider>
             <ThemeProvider
               attribute="class"
-              defaultTheme="system"
+              defaultTheme="light"
               enableSystem
               disableTransitionOnChange
             >
               <Header />
               {children}
               <Footer />
-              <div className="fixed left-1 right-auto top-1 z-[99] sm:bottom-6 sm:left-6 sm:top-auto">
+              <div className="fixed bottom-5 right-5 z-[99] sm:bottom-6 sm:left-6 sm:right-auto sm:top-auto">
                 <ModeToggle />
               </div>
               <Toaster position="top-right" />

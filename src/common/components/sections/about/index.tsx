@@ -23,7 +23,7 @@ export default function About() {
 
   return (
     <motion.section
-      className="z-50 flex h-[1000px] w-full flex-col items-center justify-start leading-8 dark:bg-darkBg dark:text-white md:scroll-mt-4 lg:h-[1100px] lg:scroll-mt-24"
+      className="z-50 flex min-h-[100vh] w-full flex-col items-center justify-start py-10 leading-8 dark:bg-darkBg dark:text-white md:scroll-mt-4 lg:min-h-[1100px] lg:scroll-mt-24 lg:py-0"
       ref={ref}
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
@@ -33,7 +33,7 @@ export default function About() {
       <div className="flex w-full flex-col items-center pt-8">
         <SectionHeading>About Me</SectionHeading>
         <motion.div
-          className="w-full overflow-hidden px-4 py-12 sm:w-[60%] sm:text-center lg:h-[700px] lg:w-[1040px] xl:w-[1180px]"
+          className="w-full overflow-hidden px-4 py-12 sm:w-[90%] sm:text-center lg:min-h-[700px] lg:w-[1040px] xl:w-[1180px]"
           ref={divRef}
           style={{
             scale: scaleProgess,
@@ -48,17 +48,17 @@ export default function About() {
                 <span>
                   I am a Computer Engineering student from India,
                   currently in my final year at Jaypee Institute of Information
-                  Technology, Noida. 
+                  Technology, Noida.
                 </span>
                 <span>
-                  My primary interest lies in Product development and Product 
-                  Aanlysis with expertise in React, Next.js, Python, AI/ML, NLP. 
-                  Proven ability to deliver user-centered web applications with 
+                  My primary interest lies in Product development and Product
+                  Aanlysis with expertise in React, Next.js, Python, AI/ML, NLP.
+                  Proven ability to deliver user-centered web applications with
                   a focus on intuitive experiences and user interaction.
                 </span>
                 <span>
-                  Seeking for Web Development and Data Science opportunities where 
-                  I can leverage my skills to create meaningful connections between 
+                  Seeking for Web Development and Data Science opportunities where
+                  I can leverage my skills to create meaningful connections between
                   products and users.
                 </span>
                 <p className="flex flex-col items-start sm:items-center lg:items-start">
@@ -70,7 +70,7 @@ export default function About() {
                     }}
                     className="w-52 lg:w-40"
                   >
-                    <span className="bg-[#ffcbb4] text-2xl font-bold uppercase dark:bg-[#ddbea9] lg:normal-case">
+                    <span className="bg-gray-300 text-2xl font-bold uppercase dark:bg-gray-700 lg:normal-case">
                       Contact!
                     </span>
                   </Link>

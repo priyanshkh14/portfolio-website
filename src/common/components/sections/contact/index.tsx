@@ -15,7 +15,7 @@ export default function Contact() {
     <motion.section
       id="contact"
       ref={ref}
-      className="flex w-full scroll-mt-12 flex-col items-center py-20 pb-44 text-center dark:bg-darkBg dark:text-white"
+      className="flex w-full scroll-mt-12 flex-col items-center pb-16 pt-10 text-center dark:bg-darkBg dark:text-white"
       initial={{
         opacity: 0.8,
       }}

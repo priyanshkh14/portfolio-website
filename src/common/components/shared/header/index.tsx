@@ -19,7 +19,7 @@ export default function Header() {
       ></motion.div>
 
       <nav className="fixed left-1/2 top-[0.15rem] flex h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
-        <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-2 text-[0.9rem] font-medium transition-colors sm:w-[initial] sm:flex-nowrap sm:gap-5">
+        <ul className="flex w-[95vw] flex-wrap items-center justify-center gap-y-2 text-[0.9rem] font-medium transition-colors sm:w-[initial] sm:flex-nowrap sm:gap-5">
           {links.map((link) => (
             <motion.li
               className="relative flex h-3/4 items-center justify-center text-black dark:text-white"
@@ -40,7 +40,7 @@ export default function Header() {
 
                 {link.id === activeSection && (
                   <motion.span
-                    className="absolute inset-0 -z-10 rounded-full bg-[#ffcbb4] dark:bg-[#ddbea9]"
+                    className="absolute inset-0 -z-10 rounded-full bg-gray-400 dark:bg-gray-700"
                     layoutId="activeSection"
                     transition={{
                       type: "spring",

@@ -12,6 +12,8 @@ import speech2Sign from '@/../public/images/speech-2-sign.png';
 import sign2Speech from '@/../public/images/sign-2-speech.png';
 import dreamPixel from '@/../public/images/dreampixel.png';
 import { BookIcon, BriefcaseBusinessIcon } from 'lucide-react';
+import { FaApple } from 'react-icons/fa';
+import { AiFillAndroid } from 'react-icons/ai';
 
 export const links = [
   {
@@ -64,13 +66,39 @@ export const academicsData = [
 
 export const experiencesData = [
   {
-    title: 'Ruaa Ventures',
+    title: 'Ruaa Ventures Private Limited',
     role: 'Full Stack Software Engineer',
-    location: 'Bengaluru, India (Remote)',
-    description: 'Full-stack Developer with a focus on building accessible, interactive user interfaces. Responsible for implementation, debugging, and testing. Actively contributing to diverse projects involving AI integration.',
+    location: 'Bengaluru, India',
+    description: (
+      <div className="flex flex-col gap-6 mt-2">
+        <div>
+          <div className="flex items-center gap-3 mb-2 font-semibold text-gray-900 dark:text-gray-100 italic">
+            Kanoon: LegalTech Platform
+            <div className="flex items-center gap-3">
+              <a href="https://play.google.com/store/apps/details?id=com.ruaa2458.kanoon" target="_blank" rel="noopener noreferrer" className="hover:text-gray-500 transition-colors">
+                <AiFillAndroid className="w-5 h-5 text-gray-800 dark:text-gray-200" />
+              </a>
+              <a href="https://apps.apple.com/in/app/kanoon/id6748016874" target="_blank" rel="noopener noreferrer" className="hover:text-gray-500 transition-colors">
+                <FaApple className="w-5 h-5 text-gray-800 dark:text-gray-200" />
+              </a>
+            </div>
+          </div>
+          <p className="text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+            Designed and owned the end-to-end mobile architecture for Android and iOS using React Native and Expo. I implemented JWT-based authentication, role-based access control, and streamlined onboarding workflows, supporting 500+ active users and 1,000+ verified lawyers in production. By delivering real-time push notifications and a multi-parameter legal discovery engine (filtering by case type, jurisdiction, and status), I improved user engagement and retention by 40–45%. Furthermore, I built RESTful APIs with Django and refined the MySQL schema and indexing, successfully reducing average API response times by 35–40%.
+          </p>
+        </div>
+
+        <div>
+          <div className="mb-2 font-semibold text-gray-900 dark:text-gray-100 italic">Tareek: Legal Case Lifecycle Management</div>
+          <p className="text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+            Architected and delivered a full-scale Case Lifecycle Management (CLM) platform, digitizing end-to-end legal operations from case creation to closure with a 99.9% crash-free session rate. I built a high-throughput PostgreSQL backend using the Django REST Framework, applying strategic indexing and query optimization to reduce API latency by 45% under real-world workloads. Additionally, I implemented secure payment and automation flows via Razorpay integration and event-driven status updates, significantly improving operational reliability and reducing manual intervention.
+          </p>
+        </div>
+      </div>
+    ),
     icon: React.createElement(BriefcaseBusinessIcon),
-    date: 'July 2025 - Present',
-    skills: 'React Native, React.js, Javascript, Tailwind CSS, PostgreSQL, Python, Django, Git',
+    date: 'June 2025 - Present',
+    skills: 'React Native, Expo, Ant Design, React.js, Tailwind CSS, PostgreSQL, MySQL, Python, Django, DRF, Git',
   },
   {
     title: 'Jaypee Institute of Information Technology',
@@ -150,7 +178,7 @@ export const projectsData = [
 
   {
     title: 'AI Image Generator',
-    description:'GenAI is a modern web-based AI platform that leverages OpenAI GPT and DALL·E models to generate human-like text and images, offering a seamless and intuitive user interface for creative content generation.',
+    description: 'GenAI is a modern web-based AI platform that leverages OpenAI GPT and DALL·E models to generate human-like text and images, offering a seamless and intuitive user interface for creative content generation.',
     tags: ['Next.js', 'Tailwind CSS', 'OpenAI API', 'GPT-4', 'DALL·E', 'TypeScript'],
     imageUrl: dreamPixel,
     link: 'https://github.com/priyanshkh14/ai-image-gen',

@@ -19,14 +19,13 @@ export function ModeToggle() {
 
   return (
     <Button
-      className="bg-transparent p-0 text-gray-700 opacity-80 dark:text-white"
-      size={"sm"}
+      className="flex h-[3rem] w-[3rem] items-center justify-center rounded-full border border-gray-200 bg-white/80 text-gray-700 shadow-xl backdrop-blur-[0.5rem] transition-all hover:scale-[1.15] active:scale-105 dark:border-gray-800 dark:bg-gray-900/80 dark:text-white"
       onClick={toggleTheme}
     >
       {theme === "light" ? (
-        <Sun className="h-4 w-4" />
+        <Sun className="h-[1.2rem] w-[1.2rem]" />
       ) : (
-        <Moon className="h-4 w-4" />
+        <Moon className="h-[1.2rem] w-[1.2rem]" />
       )}
     </Button>
   );
