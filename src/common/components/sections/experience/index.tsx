@@ -24,7 +24,10 @@ export default function Experience() {
       className="w-full scroll-mt-20 dark:bg-darkBg dark:text-white"
     >
       <SectionHeading>My experience</SectionHeading>
-      <VerticalTimeline animate={false}>
+      <VerticalTimeline
+        animate={false}
+        lineColor={theme === 'light' ? '#e5e7eb' : 'rgba(255, 255, 255, 0.2)'}
+      >
         {ihasMounted &&
           experiencesData.map((item, index) => (
             <React.Fragment key={index}>
@@ -42,15 +45,14 @@ export default function Experience() {
                     theme === 'light'
                       ? '0.4rem solid #9ca3af'
                       : '0.4rem solid rgba(255, 255, 255, 0.5)',
-                  display: theme === 'dark' ? 'none' : 'block',
                 }}
                 date={item.date}
                 icon={item.icon}
                 iconStyle={{
                   background:
-                    theme === 'light' ? '#fff' : 'rgba(255, 255, 255, 0.15)',
+                    theme === 'light' ? '#fff' : '#111827',
+                  color: theme === 'light' ? '#1f2937' : '#f3f4f6',
                   fontSize: '1.5rem',
-                  display: theme === 'dark' ? 'none' : 'flex',
                 }}
               >
                 <h3 className="font-semibold">

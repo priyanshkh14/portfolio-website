@@ -11,7 +11,7 @@ import barksAndWhiskers from '@/../public/images/barks-and-whiskers.jpg';
 import speech2Sign from '@/../public/images/speech-2-sign.png';
 import sign2Speech from '@/../public/images/sign-2-speech.png';
 import dreamPixel from '@/../public/images/dreampixel.png';
-import { BookIcon, BriefcaseBusinessIcon } from 'lucide-react';
+import { GraduationCap, Building2 } from 'lucide-react';
 import { FaApple } from 'react-icons/fa';
 import { AiFillAndroid } from 'react-icons/ai';
 
@@ -52,14 +52,14 @@ export const academicsData = [
     location: 'Noida, Uttar Pradesh, India',
     description: `B.Tech in Computer Science and Engineering (CSE). 
     [Relevant Coursework]: Database Systems, Data Structures, Algorithms & Problem Solving, Operating Systems, Machine Learning, Deep Learning, NLP, Probability and Statistics, Computer Organisation and Architecture, Software Engineering, Computer Networks & IoT, Big Data Ingestion, Front End Programming, Cryptography & Network Security, Digital Forensics & Cyber Security.`,
-    icon: React.createElement(BookIcon),
+    icon: React.createElement(GraduationCap),
     date: 'Aug 2021 - July 2025',
   },
   {
     title: 'Ramjas School',
     location: 'Anand Parbat, Delhi, India',
     description: 'High School Diploma in Science with Mathematics and Computer Science.',
-    icon: React.createElement(BookIcon),
+    icon: React.createElement(GraduationCap),
     date: 'July 2018 - July 2021',
   },
 ] as const;
@@ -96,7 +96,7 @@ export const experiencesData = [
         </div>
       </div>
     ),
-    icon: React.createElement(BriefcaseBusinessIcon),
+    icon: React.createElement(Building2),
     date: 'June 2025 - Present',
     skills: 'React Native, Expo, Ant Design, React.js, Tailwind CSS, PostgreSQL, MySQL, Python, Django, DRF, Git',
   },
@@ -105,7 +105,7 @@ export const experiencesData = [
     role: 'Research & Development Intern',
     location: 'Noida, India (Hybrid)',
     description: 'Research Intern. Developed CNN-based pipelines with CUDA for mammogram analysis, achieving 95%+ accuracy and 12% improvement over baselines; deployed on GPUs/HPCs, cutting training time by 40% and scaling to 100+ GB data.',
-    icon: React.createElement(BriefcaseBusinessIcon),
+    icon: React.createElement(Building2),
     date: 'June 2024 - July 2024',
     skills: 'Python, PyTorch, CUDA, CNNs, Mammogram Analysis, HPC'
   },
@@ -114,7 +114,7 @@ export const experiencesData = [
     role: 'Teaching Assistant',
     location: 'New Delhi, India (Hybrid)',
     description: 'Delivered DSA lectures to 200+ students in online/offline modes, created 100+ worksheets and coding challenges, and led 10+ interactive sessions weekly to boost engagement and hands-on learning.',
-    icon: React.createElement(BriefcaseBusinessIcon),
+    icon: React.createElement(Building2),
     date: 'September 2023 - March 2024',
     skills: 'C++, Data Structures, Algorithms, Teaching, Communication',
   },
