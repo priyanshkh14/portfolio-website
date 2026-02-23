@@ -10,9 +10,34 @@ import Footer from '@/common/components/shared/footer';
 import { ModeToggle } from '@/common/theme/mode-toggler';
 
 export const metadata: Metadata = {
-  title: 'Priyansh Khajuria | Portfolio',
+  title: 'Priyansh Khajuria | Full Stack Software Engineer',
   description:
-    'portfolio-website of Priyansh',
+    'Portfolio of Priyansh Khajuria, a Full Stack Software Engineer specializing in React, Next.js, React Native, and Backend Development.',
+  keywords: ['Priyansh Khajuria', 'Full Stack Developer', 'Software Engineer', 'React', 'Next.js', 'Portfolio'],
+  openGraph: {
+    title: 'Priyansh Khajuria | Full Stack Software Engineer',
+    description:
+      'Portfolio of Priyansh Khajuria, a Full Stack Software Engineer specializing in React, Next.js, React Native, and Backend Development.',
+    url: 'https://priyanshkhajuria.vercel.app/',
+    siteName: 'Priyansh Khajuria Portfolio',
+    images: [
+      {
+        url: '/images/photo.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Priyansh Khajuria | Portfolio',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Priyansh Khajuria | Full Stack Software Engineer',
+    description:
+      'Portfolio of Priyansh Khajuria, a Full Stack Software Engineer specializing in React, Next.js, React Native, and Backend Development.',
+    images: ['/images/photo.jpg'],
+  },
   icons: {
     icon: '/favicon.ico',
   },
