@@ -8,6 +8,7 @@ import { ThemeProvider } from '@/common/theme/theme-provider';
 import Header from '@/common/components/shared/header';
 import Footer from '@/common/components/shared/footer';
 import { ModeToggle } from '@/common/theme/mode-toggler';
+import { ScrollProgress } from '@/common/components/shared/scroll-progress';
 
 export const metadata: Metadata = {
   title: 'Priyansh Khajuria | Full Stack Software Engineer',
@@ -61,6 +62,7 @@ export default function RootLayout({
         )}
       >
         <div className="flex min-h-screen w-full flex-col">
+          <ScrollProgress />
           <ActiveSectionContextProvider>
             <ThemeProvider
               attribute="class"

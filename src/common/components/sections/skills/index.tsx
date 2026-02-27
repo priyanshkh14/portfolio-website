@@ -35,11 +35,13 @@ export default function Skills() {
       <ul className="my-10 flex max-w-[53rem] flex-wrap items-center justify-center gap-2 px-4 text-lg text-gray-800">
         {skillsData.map((skill, index) => (
           <motion.li
-            className="borderBlack flex items-center justify-center rounded-xl bg-gray-300 px-5 py-3 dark:bg-white/10 dark:text-white/80"
+            className="borderBlack flex items-center justify-center rounded-xl bg-gray-300 px-5 py-3 dark:bg-white/10 dark:text-white/80 cursor-pointer transition-shadow hover:shadow-[0_0_15px_rgba(0,0,0,0.2)] dark:hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]"
             key={index}
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
+            whileHover={{ scale: 1.15 }}
+            whileTap={{ scale: 0.95 }}
             viewport={{
               once: true,
             }}

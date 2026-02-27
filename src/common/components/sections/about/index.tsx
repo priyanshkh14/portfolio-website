@@ -46,7 +46,7 @@ export default function About() {
             <div className="text-md relative z-40 flex flex-col gap-3 font-semibold tracking-wide text-primary lg:absolute lg:right-0 lg:top-[27%] lg:block lg:max-w-[580px] lg:text-start lg:text-lg xl:top-1/3 xl:h-[442px] xl:max-w-[650px]">
               <div className="flex h-full flex-col justify-center gap-6">
                 <span>
-                  I am a Computer Engineering student from India,
+                  I am a Full Stack Software Engineer from India,
                   currently in my final year at Jaypee Institute of Information
                   Technology, Noida.
                 </span>

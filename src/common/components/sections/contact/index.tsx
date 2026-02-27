@@ -7,6 +7,7 @@ import SubmitBtn from "./_components/submit-btn";
 import SectionHeading from "@/common/components/shared/section-heading";
 import toast from "react-hot-toast";
 import { sendEmail } from "@/common/utils/actions/send-email";
+import { triggerConfetti } from "@/common/lib/confetti";
 
 export default function Contact() {
   const { ref } = useSectionInView("contact");
@@ -50,6 +51,7 @@ export default function Contact() {
             }
 
             toast.success("Email sent successfully!");
+            triggerConfetti();
           }}
         >
           <input

@@ -7,8 +7,10 @@ import { useSectionInView } from "@/common/lib/hooks";
 import { useActiveSectionContext } from "@/common/stores/active-section";
 import { smoothScrollTo } from "@/common/lib/utils";
 import { motion } from "framer-motion";
-import { Linkedin } from "lucide-react";
+import { Linkedin, ChevronsDown } from "lucide-react";
 import Image from "next/image";
+import { triggerConfetti } from "@/common/lib/confetti";
+import MagneticWrapper from "@/common/components/shared/magnetic";
 
 export default function Hero() {
   const { ref } = useSectionInView("home");
@@ -59,62 +61,95 @@ export default function Hero() {
                 delay: 0.1,
               }}
             >
-              <a
-                className="group flex w-64 cursor-pointer items-center justify-center gap-2 rounded-full bg-darkBg px-7 py-3 text-white outline-none transition hover:bg-gray-400 hover:text-black hover:dark:text-black sm:w-auto"
-                onClick={(e) => {
-                  smoothScrollTo({ e, id: "contact" });
-                  setActiveSection("contact");
-                  setTimeOfLastClick(Date.now());
-                }}
-              >
-                <span>Contact me here</span>
-              </a>
+              <MagneticWrapper>
+                <a
+                  className="group flex w-64 cursor-pointer items-center justify-center gap-2 rounded-full bg-darkBg px-7 py-3 text-white outline-none transition hover:bg-gray-400 hover:text-black hover:dark:text-black sm:w-auto"
+                  onClick={(e) => {
+                    smoothScrollTo({ e, id: "contact" });
+                    setActiveSection("contact");
+                    setTimeOfLastClick(Date.now());
+                    triggerConfetti();
+                  }}
+                >
+                  <span>Contact me here</span>
+                </a>
+              </MagneticWrapper>
 
-              <a
-                className="borderBlack group flex w-64 cursor-pointer items-center justify-center gap-2 rounded-full bg-white px-7 py-3 text-black outline-none transition hover:bg-gray-100 dark:bg-white/10 dark:text-white dark:hover:bg-white/20 sm:w-auto"
-                href="/CV_Priyansh_Khajuria.pdf"
-                download
-              >
-                <span>Download CV</span>
-              </a>
+              <MagneticWrapper>
+                <a
+                  className="borderBlack group flex w-64 cursor-pointer items-center justify-center gap-2 rounded-full bg-white px-7 py-3 text-black outline-none transition hover:bg-gray-100 dark:bg-white/10 dark:text-white dark:hover:bg-white/20 sm:w-auto"
+                  href="/CV_Priyansh_Khajuria.pdf"
+                  download
+                >
+                  <span>Download CV</span>
+                </a>
+              </MagneticWrapper>
 
               <div className="flex gap-2">
-                <a
-                  className="borderBlack flex h-[50px] w-[50px] cursor-pointer items-center justify-center gap-2 rounded-full bg-white p-2 text-black transition hover:bg-gray-100 hover:text-gray-950 dark:bg-white/10 dark:text-white/60 dark:hover:bg-white/20"
-                  href="https://www.linkedin.com/in/priyansh-khajuria-39694023b/"
-                  target="_blank"
-                >
-                  <Linkedin />
-                </a>
-                <a
-                  className="borderBlack flex h-[50px] w-[50px] cursor-pointer items-center justify-center gap-2 rounded-full bg-white p-2 text-gray-700 transition hover:bg-gray-100 hover:text-gray-950 dark:bg-white/10 dark:text-white/60 dark:hover:bg-white/20"
-                  href="https://github.com/priyanshkh14"
-                  target="_blank"
-                >
-                  <Image
-                    width={25}
-                    height={25}
-                    src={"/svgs/github.svg"}
-                    alt="github icon"
-                  />
-                </a>
-                <a
-                  className="borderBlack flex h-[50px] w-[50px] cursor-pointer items-center justify-center gap-2 rounded-full bg-white p-2 text-gray-700 transition hover:bg-gray-100 hover:text-gray-950 dark:bg-white/10 dark:text-white/60 dark:hover:bg-white/20"
-                  href="https://leetcode.com/u/priyanshkh14/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Image
-                    width={25}
-                    height={25}
-                    src={"/svgs/leetcode.svg"}
-                    alt="leetcode icon"
-                  />
-                </a>
+                <MagneticWrapper>
+                  <a
+                    className="borderBlack flex h-[50px] w-[50px] cursor-pointer items-center justify-center gap-2 rounded-full bg-white p-2 text-black transition hover:bg-gray-100 hover:text-gray-950 dark:bg-white/10 dark:text-white/60 dark:hover:bg-white/20"
+                    href="https://www.linkedin.com/in/priyansh-khajuria-39694023b/"
+                    target="_blank"
+                  >
+                    <Linkedin />
+                  </a>
+                </MagneticWrapper>
+
+                <MagneticWrapper>
+                  <a
+                    className="borderBlack flex h-[50px] w-[50px] cursor-pointer items-center justify-center gap-2 rounded-full bg-white p-2 text-gray-700 transition hover:bg-gray-100 hover:text-gray-950 dark:bg-white/10 dark:text-white/60 dark:hover:bg-white/20"
+                    href="https://github.com/priyanshkh14"
+                    target="_blank"
+                  >
+                    <Image
+                      width={25}
+                      height={25}
+                      src={"/svgs/github.svg"}
+                      alt="github icon"
+                    />
+                  </a>
+                </MagneticWrapper>
+
+                <MagneticWrapper>
+                  <a
+                    className="borderBlack flex h-[50px] w-[50px] cursor-pointer items-center justify-center gap-2 rounded-full bg-white p-2 text-gray-700 transition hover:bg-gray-100 hover:text-gray-950 dark:bg-white/10 dark:text-white/60 dark:hover:bg-white/20"
+                    href="https://leetcode.com/u/priyanshkh14/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      width={25}
+                      height={25}
+                      src={"/svgs/leetcode.svg"}
+                      alt="leetcode icon"
+                    />
+                  </a>
+                </MagneticWrapper>
               </div>
             </motion.div>
           </div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.2,
+          }}
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce"
+        >
+          <a
+            className="cursor-pointer text-gray-500 transition hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+            onClick={(e) => {
+              smoothScrollTo({ e, id: "about" });
+              setActiveSection("about");
+              setTimeOfLastClick(Date.now());
+            }}
+          >
+            <ChevronsDown size={40} />
+          </a>
+        </motion.div>
       </section>
       <div className="flex w-full justify-center dark:bg-darkBg">
         <SectionDivider />
