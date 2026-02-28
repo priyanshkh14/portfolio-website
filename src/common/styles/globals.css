@@ -61,3 +61,12 @@ html {
     @apply bg-background text-foreground;
   }
 }
+
+/* Force hide all native iOS/Safari media controls and play buttons for background videos */
+video::-webkit-media-controls {
+  display: none !important;
+}
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
