@@ -1,6 +1,7 @@
 "use client";
 
 import "next-cloudinary/dist/cld-video-player.css";
+import React, { useEffect, useRef } from "react";
 import SectionDivider from "@/common/components/shared/section-divider";
 import TextAnimation from "./_components/text-animation";
 import { useSectionInView } from "@/common/lib/hooks";
@@ -16,6 +17,20 @@ import GlitchText from "@/common/components/shared/glitch-text";
 export default function Hero() {
   const { ref } = useSectionInView("home");
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    // Aggressively force iOS to recognize the video as muted and inline
+    // This bypasses strict autoplay blockers that ignore HTML attributes
+    if (videoRef.current) {
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = true;
+      videoRef.current.playsInline = true;
+      videoRef.current.play().catch((e) => {
+        console.error("Video autoplay was strictly prevented by the browser (Low Power Mode):", e);
+      });
+    }
+  }, []);
 
   return (
     <>
@@ -29,24 +44,20 @@ export default function Hero() {
             "absolute left-0 top-0 h-screen w-full dark:bg-[#0000007c]"
           }
         ></div>
-        <div
-          className="absolute inset-0 -z-50 h-[100dvh] w-screen pointer-events-none overflow-hidden"
-          dangerouslySetInnerHTML={{
-            __html: `
-               <video 
-                 width="100%" 
-                 height="100%" 
-                 autoplay 
-                 loop 
-                 muted 
-                 playsinline 
-                 style="object-fit: cover; width: 100vw; height: 100dvh;"
-               >
-                 <source src="/layout.mp4" type="video/mp4" />
-               </video>
-             `
-          }}
-        />
+        <video
+          ref={videoRef}
+          width="480"
+          height="720"
+          preload="auto"
+          autoPlay
+          playsInline
+          crossOrigin="anonymous"
+          muted
+          loop
+          className="absolute inset-0 -z-50 h-[100dvh] w-screen object-cover pointer-events-none"
+        >
+          <source src="/layout.mp4" type="video/mp4" />
+        </video>
         <div className="container flex flex-col items-start justify-center tracking-wide text-black dark:text-white">
           <div className="container relative flex h-full w-full flex-col items-center">
             <div className="h-72 w-[90vw] text-center text-[2rem] font-extrabold sm:w-[520px] md:w-[700px] lg:mb-5 lg:w-[920px] lg:text-[3rem]">
