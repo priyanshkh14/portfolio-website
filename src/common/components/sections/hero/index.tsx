@@ -32,15 +32,15 @@ export default function Hero() {
         <video
           width="480"
           height="720"
-          preload="none"
+          preload="auto"
           autoPlay
           playsInline
           crossOrigin="anonymous"
           muted
           loop
-          className="absolute -z-10 h-screen w-screen object-cover"
+          className="absolute inset-0 -z-50 h-screen w-screen object-cover pointer-events-none"
         >
-          <source src="/layout.mp4" />
+          <source src="/layout.mp4" type="video/mp4" />
         </video>
         <div className="container flex flex-col items-start justify-center tracking-wide text-black dark:text-white">
           <div className="container relative flex h-full w-full flex-col items-center">
@@ -141,10 +141,10 @@ export default function Hero() {
           transition={{
             delay: 0.2,
           }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce"
+          className="absolute bottom-12 w-full flex justify-center z-50 sm:bottom-10"
         >
           <a
-            className="cursor-pointer text-gray-500 transition hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+            className="animate-bounce cursor-pointer text-gray-500 transition hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
             onClick={(e) => {
               smoothScrollTo({ e, id: "about" });
               setActiveSection("about");
