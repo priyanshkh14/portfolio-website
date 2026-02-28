@@ -30,7 +30,7 @@ const Project = memo(function Project({
         scale: scaleProgess,
         opacity: opacityProgess,
       }}
-      className="group mb-3 last:mb-0 sm:mb-8"
+      className="group mb-3 last:mb-0 sm:mb-8 will-change-transform transform-gpu"
     >
       <Link href={link} target="_blank">
         <section

@@ -43,7 +43,7 @@ export default function SectionHeading({ children }: SectionHeadingProps) {
 
   return (
     <motion.h2
-      className="mt-6 mb-12 flex flex-wrap justify-center overflow-hidden text-center text-4xl font-semibold uppercase"
+      className="mt-6 mb-12 flex flex-wrap justify-center overflow-hidden text-center text-4xl font-semibold uppercase transform-gpu"
       variants={container}
       initial="hidden"
       whileInView="visible"
@@ -52,7 +52,7 @@ export default function SectionHeading({ children }: SectionHeadingProps) {
       {words.map((word, index) => (
         <span key={index} className="mr-3 flex">
           {word.split("").map((char, charIndex) => (
-            <motion.span key={charIndex} variants={child}>
+            <motion.span key={charIndex} variants={child} className="transform-gpu will-change-transform">
               {char}
             </motion.span>
           ))}

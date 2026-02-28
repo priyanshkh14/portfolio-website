@@ -25,8 +25,8 @@ export default function Experience() {
     >
       <SectionHeading>My experience</SectionHeading>
       <VerticalTimeline
-        animate={false}
         lineColor={theme === 'light' ? '#e5e7eb' : 'rgba(255, 255, 255, 0.2)'}
+        animate={false} // Animation disabled to prevent heavy reflows on scroll for mobile devices
       >
         {ihasMounted &&
           experiencesData.map((item, index) => (

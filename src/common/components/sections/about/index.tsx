@@ -23,10 +23,11 @@ export default function About() {
 
   return (
     <motion.section
-      className="z-50 flex min-h-[100vh] w-full flex-col items-center justify-start py-10 leading-8 dark:bg-darkBg dark:text-white md:scroll-mt-4 lg:min-h-[1100px] lg:scroll-mt-24 lg:py-0"
+      className="z-50 flex min-h-[100vh] w-full flex-col items-center justify-start py-10 leading-8 dark:bg-darkBg dark:text-white md:scroll-mt-4 lg:min-h-[1100px] lg:scroll-mt-24 lg:py-0 will-change-transform transform-gpu"
       ref={ref}
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
       transition={{ delay: 0.175, ease: 'easeInOut' }}
       id="about"
     >
