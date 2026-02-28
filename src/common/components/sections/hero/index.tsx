@@ -11,6 +11,7 @@ import { Linkedin, ChevronsDown } from "lucide-react";
 import Image from "next/image";
 import { triggerConfetti } from "@/common/lib/confetti";
 import MagneticWrapper from "@/common/components/shared/magnetic";
+import GlitchText from "@/common/components/shared/glitch-text";
 
 export default function Hero() {
   const { ref } = useSectionInView("home");
@@ -48,7 +49,7 @@ export default function Hero() {
                 animate={{ y: 0, x: "-50%", opacity: 1 }}
                 className="mb-10 text-start font-extrabold"
               >
-                Hey!
+                <GlitchText text="Hey!" />
               </motion.span>
               <br />
               <TextAnimation delay={1} baseText={`I am Priyansh`} />
