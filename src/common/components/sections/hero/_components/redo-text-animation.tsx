@@ -12,7 +12,7 @@ export default function RedoTextAnimation({ delay }: IRedoTextAnimationProps) {
 
   const texts = [
     "Thanks for visiting! Slide down to explore more👇.",
-    "I am Computer Engineering student from India.",
+    "I am Full Stack Software Engineer from India.",
     "My primary interest lies in Product development.",
     "Continuous learning keeps me sharp and ready for the future.",
     "Debugging is like a treasure hunt, but with bugs!",

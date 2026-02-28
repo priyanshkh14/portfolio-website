@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: 'Priyansh Khajuria | Full Stack Software Engineer',
     description:
       'Portfolio of Priyansh Khajuria, a Full Stack Software Engineer specializing in React, Next.js, React Native, and Backend Development.',
-    url: 'https://priyanshkhajuria.vercel.app/',
+    url: 'https://www.priyanshkhajuria.website/',
     siteName: 'Priyansh Khajuria Portfolio',
     images: [
       {
