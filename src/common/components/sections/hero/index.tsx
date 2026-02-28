@@ -34,6 +34,7 @@ export default function Hero() {
           height="720"
           preload="none"
           autoPlay
+          playsInline
           crossOrigin="anonymous"
           muted
           loop
@@ -104,6 +105,7 @@ export default function Hero() {
                     target="_blank"
                   >
                     <Image
+                      priority
                       width={25}
                       height={25}
                       src={"/svgs/github.svg"}
@@ -120,6 +122,7 @@ export default function Hero() {
                     rel="noopener noreferrer"
                   >
                     <Image
+                      priority
                       width={25}
                       height={25}
                       src={"/svgs/leetcode.svg"}

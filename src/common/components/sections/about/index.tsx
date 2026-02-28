@@ -33,12 +33,11 @@ export default function About() {
       <div className="flex w-full flex-col items-center pt-8">
         <SectionHeading>About Me</SectionHeading>
         <motion.div
-          className="w-full overflow-hidden px-4 py-12 sm:w-[90%] sm:text-center lg:min-h-[700px] lg:w-[1040px] xl:w-[1180px]"
+          className="w-full overflow-hidden px-4 py-12 sm:w-[90%] sm:text-center lg:min-h-[700px] lg:w-[1040px] xl:w-[1180px] will-change-transform"
           ref={divRef}
           style={{
             scale: scaleProgess,
             opacity: opacityProgess,
-            willChange: 'transform, opacity',
             transform: 'translateZ(0)',
           }}
         >

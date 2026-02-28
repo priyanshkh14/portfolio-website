@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
+import React, { useRef, memo } from 'react';
 import { projectsData } from '@/common/lib/data';
 import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 type ProjectProps = (typeof projectsData)[number];
 
-export default function Project({
+const Project = memo(function Project({
   title,
   description,
   tags,
@@ -63,4 +63,6 @@ export default function Project({
       </Link>
     </motion.div>
   );
-}
+});
+
+export default Project;
