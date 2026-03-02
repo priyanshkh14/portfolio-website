@@ -9,6 +9,7 @@ import Header from '@/common/components/shared/header';
 import Footer from '@/common/components/shared/footer';
 import { ModeToggle } from '@/common/theme/mode-toggler';
 import { ScrollProgress } from '@/common/components/shared/scroll-progress';
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: 'Priyansh Khajuria | Full Stack Software Engineer',
@@ -79,6 +80,7 @@ export default function RootLayout({
               <Toaster position="top-right" />
             </ThemeProvider>
           </ActiveSectionContextProvider>
+          <Analytics />
         </div>
       </body>
     </html>
